@@ -11,7 +11,7 @@ This plugin adds the Next Steps Tile to a project by default and avoids manual c
 
 #### Will Do
 
-- Will add Next Steps tile to Contacts module
+- Will add Next Steps tile to each contact's page
 
 
 ## Requirements
