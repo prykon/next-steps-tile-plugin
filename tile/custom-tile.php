@@ -1,7 +1,7 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
-class Disciple_Tools_Plugin_Starter_Template_Tile
+class Next_Steps_Tile_Tile
 {
     private static $_instance = null;
     public static function instance(){
@@ -29,7 +29,7 @@ class Disciple_Tools_Plugin_Starter_Template_Tile
      */
     public function dt_details_additional_tiles( $tiles, $post_type = "" ) {
         if ( $post_type === "contacts" ){
-            $tiles["disciple_tools_plugin_starter_template"] = [ "label" => __( "Plugin Starter Template", 'disciple_tools' ) ];
+            $tiles["Next_Steps_Tile"] = [ "label" => __( "Next Steps Tile", 'disciple_tools' ) ];
         }
         return $tiles;
     }
@@ -56,78 +56,72 @@ class Disciple_Tools_Plugin_Starter_Template_Tile
              */
 
             /**
-             * This is an example of a text field
+             * Requests field
              */
-            $fields['disciple_tools_plugin_starter_template_text'] = [
-                'name'        => __( 'Text', 'disciple_tools' ),
-                'description' => _x( 'Text', 'Optional Documentation', 'disciple_tools' ),
-                'type'        => 'text',
-                'default'     => '',
-                'tile' => 'disciple_tools_plugin_starter_template',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
-            ];
-            /**
-             * This is an example of a multiselect field
-             */
-            $fields["disciple_tools_plugin_starter_template_multiselect"] = [
-                "name" => __( 'Multiselect', 'disciple_tools' ),
+            $fields["Requests_multiselect"] = [
+                "name" => __( 'Requests', 'disciple_tools' ),
                 "default" => [
-                    "one" => [ "label" => __( "One", 'disciple_tools' ) ],
-                    "two" => [ "label" => __( "Two", 'disciple_tools' ) ],
-                    "three" => [ "label" => __( "Three", 'disciple_tools' ) ],
-                    "four" => [ "label" => __( "Four", 'disciple_tools' ) ],
+                    "prayer" => [ "label" => __( "Prayer", 'disciple_tools' ) ],
+                    "bible" => [ "label" => __( "Bible", 'disciple_tools' ) ],
+                    "online connection" => [ "label" => __( "Online Connection", 'disciple_tools' ) ],
+                    "face-to-face" => [ "label" => __( "Face to Face", 'disciple_tools' ) ],
                 ],
-                "tile" => "disciple_tools_plugin_starter_template",
+                "tile" => "Next_Steps_Tile",
                 "type" => "multi_select",
                 "hidden" => false,
-                'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
+                'icon' => get_template_directory_uri() . '/dt-assets/images/can-share.svg',
             ];
+
             /**
-             * This is an example of a key select field
+             * Contact Preference field
              */
-            $fields["disciple_tools_plugin_starter_template_keyselect"] = [
-                'name' => "Key Select",
-                'type' => 'key_select',
-                "tile" => "disciple_tools_plugin_starter_template",
-                'default' => [
-                    'new'   => [
-                        "label" => _x( 'New', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "New training added to the system", "Training Status field description", 'disciple_tools' ),
-                        'color' => "#ff9800"
-                    ],
-                    'proposed'   => [
-                        "label" => _x( 'Proposed', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This training has been proposed and is in initial conversations", "Training Status field description", 'disciple_tools' ),
-                        'color' => "#ff9800"
-                    ],
-                    'scheduled' => [
-                        "label" => _x( 'Scheduled', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This training is confirmed, on the calendar.", "Training Status field description", 'disciple_tools' ),
-                        'color' => "#4CAF50"
-                    ],
-                    'in_progress' => [
-                        "label" => _x( 'In Progress', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This training is confirmed, on the calendar, or currently active.", "Training Status field description", 'disciple_tools' ),
-                        'color' => "#4CAF50"
-                    ],
-                    'complete'     => [
-                        "label" => _x( "Complete", 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This training has successfully completed", "Training Status field description", 'disciple_tools' ),
-                        'color' => "#4CAF50"
-                    ],
-                    'paused'       => [
-                        "label" => _x( 'Paused', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This contact is currently on hold. It has potential of getting scheduled in the future.", "Training Status field description", 'disciple_tools' ),
-                        'color' => "#ff9800"
-                    ],
-                    'closed'       => [
-                        "label" => _x( 'Closed', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This training is no longer going to happen.", "Training Status field description", 'disciple_tools' ),
-                        "color" => "#366184",
-                    ],
+            $fields["Contact_Preference_multiselect"] = [
+                "name" => __( 'Contact Preference', 'disciple_tools' ),
+                "default" => [
+                    "messenger" => [ "label" => __( "Messenger", 'disciple_tools' ) ],
+                    "whatsapp" => [ "label" => __( "WhatsApp", 'disciple_tools' ) ],
+                    "viber" => [ "label" => __( "Viber", 'disciple_tools' ) ],
+                    "mobile_text" => [ "label" => __( "Mobile Text", 'disciple_tools' ) ],
+                    "zoom" => [ "label" => __( "Zoom", 'disciple_tools' ) ],
+                    "phone_call" => [ "label" => __( "Phone Call", 'disciple_tools' ) ],
                 ],
-                'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
-                "default_color" => "#366184",
+                "tile" => "Next_Steps_Tile",
+                "type" => "multi_select",
+                "hidden" => false,
+                'icon' => get_template_directory_uri() . '/dt-assets/images/phone.svg',
+            ];
+
+            /**
+             * Translation field
+             */
+            $fields["Translation_multiselect"] = [
+                "name" => __( 'Translation', 'disciple_tools' ),
+                "default" => [
+                    "bosnian" => [ "label" => __( "Bosnian", 'disciple_tools' ) ],
+                    "serbian" => [ "label" => __( "Serbian", 'disciple_tools' ) ],
+                    "croatian" => [ "label" => __( "Croatian", 'disciple_tools' ) ],
+                ],
+                "tile" => "Next_Steps_Tile",
+                "type" => "multi_select",
+                "hidden" => false,
+                'icon' => get_template_directory_uri() . '/dt-assets/images/speak.svg',
+            ];
+
+            /**
+             * Mailing Status field
+             */
+            $fields["Mailing_Status_multiselect"] = [
+                "name" => __( 'Mailing Status', 'disciple_tools' ),
+                "default" => [
+                    "requested" => [ "label" => __( "Requested", 'disciple_tools' ) ],
+                    "sent" => [ "label" => __( "Sent", 'disciple_tools' ) ],
+                    "received" => [ "label" => __( "Received", 'disciple_tools' ) ],
+                    "hand_delivered" => [ "label" => __( "Hand Delivered", 'disciple_tools' ) ],
+                ],
+                "tile" => "Next_Steps_Tile",
+                "type" => "multi_select",
+                "hidden" => false,
+                'icon' => get_template_directory_uri() . '/dt-assets/images/email.svg',
             ];
         }
         return $fields;
@@ -137,7 +131,7 @@ class Disciple_Tools_Plugin_Starter_Template_Tile
         /**
          * @todo set the post type and the section key that you created in the dt_details_additional_tiles() function
          */
-        if ( $post_type === "contacts" && $section === "disciple_tools_plugin_starter_template" ){
+        if ( $post_type === "contacts" && $section === "Next_Steps_Tile" ){
             /**
              * These are two sets of key data:
              * $this_post is the details for this specific post
@@ -147,20 +141,7 @@ class Disciple_Tools_Plugin_Starter_Template_Tile
              */
             $this_post = DT_Posts::get_post( $post_type, get_the_ID() );
             $post_type_fields = DT_Posts::get_post_field_settings( $post_type );
-            ?>
-
-            <!--
-            @todo you can add HTML content to this section.
-            -->
-
-            <div class="cell small-12 medium-4">
-                <!-- @todo remove this notes section-->
-                <strong>You can do a number of customizations here.</strong><br><br>
-                All the post-type fields: ( <?php echo '<code>' . esc_html( implode( ', ', array_keys( $post_type_fields ) ) ) . '</code>' ?> )<br><br>
-                All the fields for this post: ( <?php echo '<code>' . esc_html( implode( ', ', array_keys( $this_post ) ) ) . '</code>' ?> )<br><br>
-            </div>
-
-        <?php }
+        }
     }
 }
-Disciple_Tools_Plugin_Starter_Template_Tile::instance();
+Next_Steps_Tile_Tile::instance();

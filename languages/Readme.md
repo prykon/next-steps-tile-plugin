@@ -2,4 +2,4 @@
 {translation-domain}-{localisation}.po
 
 ex:
-disciple-tools-plugin-starter-template-fr_FR.po
+next-steps-tile-fr_FR.po
