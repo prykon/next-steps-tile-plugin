@@ -36,4 +36,4 @@ system for git. For a more details on contribution see the
 
 ## Screenshots
 
-![screenshot](documentation/assets/screenshot.png)
+![screenshot](assets/screenshot.png)
