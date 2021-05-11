@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/next-steps-tile.svg?branch=master)](https://travis-ci.com/DiscipleTools/next-steps-tile)
 
-# Disciple Tools - Next Steps Tile Plugin
+# Disciple Tools - Next Steps Tile Plugin (BETA)
 
 
 ## Purpose
