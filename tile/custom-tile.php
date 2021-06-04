@@ -63,7 +63,7 @@ class Next_Steps_Tile_Tile
                 "default" => [
                     "prayer" => [ "label" => __( "Prayer", 'disciple_tools' ) ],
                     "bible" => [ "label" => __( "Bible", 'disciple_tools' ) ],
-                    "online connection" => [ "label" => __( "Online Connection", 'disciple_tools' ) ],
+                    "online_connection" => [ "label" => __( "Online Connection", 'disciple_tools' ) ],
                     "face-to-face" => [ "label" => __( "Face to Face", 'disciple_tools' ) ],
                 ],
                 "tile" => "Next_Steps_Tile",
